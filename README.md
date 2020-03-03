@@ -83,4 +83,13 @@ aws lambda publish-layer-version \
         --description "Tippecanoe lambda layer" \
         --zip-file fileb://tippecanoe-lambda.zip \
         --license-info "BSD-2-Clause"
+# Make public
+# From https://github.com/developmentseed/geolambda#create-a-new-version
+aws lambda add-layer-version-permission \
+    --region "$REGION" \
+    --layer-name tippecanoe-lambda \
+	--statement-id public \
+    --version-number 1 \
+    --principal '*' \
+	--action lambda:GetLayerVersion
 ```
