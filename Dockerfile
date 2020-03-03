@@ -19,7 +19,9 @@ CMD make test
 
 # Copy binaries to `/opt`
 RUN cp ./tippecanoe /opt/tippecanoe
-RUN cp ./tippecanoe-decode /opt/tippecanoe-decode
-RUN cp ./tippecanoe-enumerate /opt/tippecanoe-enumerate
-RUN cp ./tippecanoe-json-tool /opt/tippecanoe-json-tool
 RUN cp ./tile-join /opt/tile-join
+
+# Uncomment here if you also want the following binaries
+# RUN cp ./tippecanoe-decode /opt/tippecanoe-decode
+# RUN cp ./tippecanoe-enumerate /opt/tippecanoe-enumerate
+# RUN cp ./tippecanoe-json-tool /opt/tippecanoe-json-tool
